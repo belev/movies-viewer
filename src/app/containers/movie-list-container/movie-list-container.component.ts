@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 import { Movie } from '../../models/movie.model';
@@ -7,7 +7,6 @@ import * as fromRootStore from '../../store';
 
 @Component({
   selector: 'movie-list-container',
-  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './movie-list-container.component.html',
   styleUrls: ['./movie-list-container.component.less']
 })
