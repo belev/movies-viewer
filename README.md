@@ -1,6 +1,8 @@
-# MoviesViewer
+# Movies Viewer
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
+
+The application is deployed on Heroku - [live example](https://movies-viewer.herokuapp.com/)
 
 ## Development server
 
