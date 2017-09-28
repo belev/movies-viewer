@@ -1,7 +1,7 @@
-<div *ngIf="movie">
-  <div>
-    {{movie.title}}, {{movie.release_date}}, {{movie.vote_average}}
+<div class="movie-detail col-sm-8" *ngIf="movie">
+  <img class="movie-image" src="{{'https://image.tmdb.org/t/p/w300/' + movie.poster_path}}" alt="">
+  <div class="movie-info">
+    <div class="movie-title">{{movie.title}}</div>
+    <div>{{movie.overview}}</div>
   </div>
-  <img src="{{'https://image.tmdb.org/t/p/w185/' + movie.poster_path}}" alt="">
-  <div>{{movie.overview}}</div>
 </div>
