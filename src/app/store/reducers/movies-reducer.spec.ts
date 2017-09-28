@@ -1,10 +1,17 @@
-import { generateMockMovie } from '../../models/movie.model';
+import { Movie } from '../../models/movie.model';
 
 import * as fromMovies from './movies-reducer';
 import { LoadMoviesSuccessAction, MovieSelectedAction } from '../actions/movies-actions';
 
 describe('MoviesReducer', () => {
-  const movie1 = generateMockMovie();
+  const movie1: Movie = {
+    id: 1,
+    vote_average: 5,
+    title: 'movie title',
+    poster_path: 'poster path',
+    overview: 'overview',
+    release_date: '2016-02-09'
+  };
   const movie2 = Object.assign({}, movie1, {id: 2});
   const movie3 = Object.assign({}, movie1, {id: 3});
 
