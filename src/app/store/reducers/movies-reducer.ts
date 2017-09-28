@@ -21,6 +21,14 @@ export function reducer(state: State = INITIAL_MOVIES_STATE, action: moviesActio
       );
     }
 
+    case moviesActions.MOVIE_SELECTED_ACTION: {
+      return Object.assign(
+        {},
+        state,
+        {selectedMovie: action.payload}
+      );
+    }
+
     default:
       return state;
   }
