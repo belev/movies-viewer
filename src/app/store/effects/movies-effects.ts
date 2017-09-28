@@ -4,6 +4,7 @@ import { MoviesService } from '../../services/movies.service';
 import { Observable } from 'rxjs/Observable';
 import { LOAD_MOVIES_ACTION, LoadMoviesSuccessAction } from '../actions/movies-actions';
 import { Action } from '@ngrx/store';
+import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class MoviesEffects {
@@ -12,8 +13,9 @@ export class MoviesEffects {
     private moviesService: MoviesService
   ) { }
 
-  @Effect() userThreads$: Observable<Action> = this.actions$
+  @Effect() movies$: Observable<Action> = this.actions$
     .ofType(LOAD_MOVIES_ACTION)
     .switchMap(action => this.moviesService.loadMostPopular())
-    .map(allUserData => new LoadMoviesSuccessAction(allUserData));
+    .map(movies => new LoadMoviesSuccessAction(movies))
+    .catch(() => of(new LoadMoviesSuccessAction([])));
 }
