@@ -11,10 +11,18 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import * as fromRootStore from './store';
 import { MoviesEffects } from './store/effects/movies-effects';
 import { environment } from '../environments/environment';
+import { MovieListContainerComponent } from './containers/movie-list-container/movie-list-container.component';
+import { MovieDetailContainerComponent } from './containers/movie-detail-container/movie-detail-container.component';
+import { MovieListItemComponent } from './components/movie-list-item/movie-list-item.component';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MovieListContainerComponent,
+    MovieDetailContainerComponent,
+    MovieListItemComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,

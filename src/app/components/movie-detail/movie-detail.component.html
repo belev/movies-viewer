@@ -1,0 +1,7 @@
+<div *ngIf="movie">
+  <div>
+    {{movie.title}}, {{movie.release_date}}, {{movie.vote_average}}
+  </div>
+  <img src="{{'https://image.tmdb.org/t/p/w185/' + movie.poster_path}}" alt="">
+  <div>{{movie.overview}}</div>
+</div>

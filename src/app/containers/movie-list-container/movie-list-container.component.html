@@ -1,0 +1,5 @@
+<ul>
+  <movie-list-item *ngFor="let movie of movies$ | async"
+                   [movie]="movie" (movieSelected)="handleMovieSelected($event)">
+  </movie-list-item>
+</ul>
